@@ -175,8 +175,11 @@
                                                 <rect key="frame" x="24" y="275" width="345" height="34"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="© 2016 Check24">
-                                                    <color key="titleColor" name="BrandPrimary"/>
+                                                    <color key="titleColor" systemColor="linkColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="gotToWebView:" destination="nTI-5m-h1X" eventType="touchUpInside" id="pzO-BN-bxM"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beschreibung" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5e-xp-54d">
                                                 <rect key="frame" x="24" y="218.33333333333331" width="345" height="20.333333333333343"/>
@@ -269,6 +272,9 @@
         <namedColor name="White">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

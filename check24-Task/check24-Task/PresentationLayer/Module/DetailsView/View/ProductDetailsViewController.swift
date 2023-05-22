@@ -48,4 +48,8 @@ class ProductDetailsViewController: UIViewController {
        
     }
     
+    @IBAction func gotToWebView(_ sender: Any) {
+        self.viewModel?.navigateTowebView(viewController: self)
+    }
+    
 }

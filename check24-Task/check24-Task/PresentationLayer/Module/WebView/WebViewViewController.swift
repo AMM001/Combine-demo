@@ -23,9 +23,9 @@ class WebViewViewController: UIViewController, WKNavigationDelegate {
         super.viewDidLoad()
         
         // 1
-        let url = URL(string: "https://m.check24.de/rechtliche-hinweise/?deviceoutput=app")!
-        webView.load(URLRequest(url: url))
-        
+        if let url = URL(string: "https://m.check24.de/rechtliche-hinweise/?deviceoutput=app"){
+            webView.load(URLRequest(url: url))
+        }
         // 2
         let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
         toolbarItems = [refresh]

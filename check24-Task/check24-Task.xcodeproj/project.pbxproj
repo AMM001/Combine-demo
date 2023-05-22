@@ -335,6 +335,7 @@
 		84C3A1C32A1B64FC000339A6 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				84C3A1E12A1B9E95000339A6 /* ErrorView */,
 				84C3A1DB2A1B992E000339A6 /* FooterView */,
 				84C3A1C72A1B660E000339A6 /* ProductTableViewCell.swift */,
 				84C3A1C82A1B660E000339A6 /* ProductTableViewCell.xib */,
@@ -366,6 +367,13 @@
 				84C3A1DF2A1B9AD9000339A6 /* WebViewViewController.swift */,
 			);
 			path = WebView;
+			sourceTree = "<group>";
+		};
+		84C3A1E12A1B9E95000339A6 /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ErrorView;
 			sourceTree = "<group>";
 		};
 		E32AE614759E32E3C151D228 /* Frameworks */ = {

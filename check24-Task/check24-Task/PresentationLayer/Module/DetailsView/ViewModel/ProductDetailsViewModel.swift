@@ -6,9 +6,12 @@
 //
 
 import Foundation
+import UIKit
 import Combine
 
 protocol ProductDetailsViewModelProtocol {
+    func navigateTowebView(viewController:UIViewController)
+
     var product: Product? { get }
     var isFavouriteChanged : PassthroughSubject<Void, Never> { get}
 }
@@ -21,4 +24,10 @@ class ProductDetailsViewModel: ProductDetailsViewModelProtocol {
         self.product = product
     }
     init() {}
+    
+    func navigateTowebView(viewController:UIViewController) {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "WebViewViewController") as! WebViewViewController
+        viewController.present(vc, animated: true)
+    }
 }
