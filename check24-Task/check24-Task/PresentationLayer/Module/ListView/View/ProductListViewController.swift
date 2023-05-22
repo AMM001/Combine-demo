@@ -14,19 +14,23 @@ class ProductListViewController:UIViewController {
     @IBOutlet weak private var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
+    private let refreshControl = UIRefreshControl()
     private var viewModel:ProductListViewModelProtocol?
     private var subscribers = Set<AnyCancellable>()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         setupTableView()
         bindData()
-        self.viewModel?.getAllProductList()
+        self.viewModel?.getAllProductList(category: .all)
+        
+        segmentedControl.addTarget(self, action: #selector(self.segmentTaped(_:)), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(self.refreshData(_:)), for: .valueChanged)
         
     }
     
-   func setup(viewModel: ProductListViewModelProtocol = ProductListViewModel()) {
+    func setup(viewModel: ProductListViewModelProtocol = ProductListViewModel()) {
         self.viewModel = viewModel
     }
     
@@ -38,7 +42,7 @@ class ProductListViewController:UIViewController {
         tableView.register(ProductDisableTableViewCell.self)
         //        tableView.register(ProductListHeaderView.self)
         //        tableView.register(ProductListFooterView.self)
-        // tableView.refreshControl = refreshControl
+        tableView.refreshControl = refreshControl
     }
     
     func bindData() {
@@ -48,9 +52,23 @@ class ProductListViewController:UIViewController {
                 guard let self = self else {
                     return
                 }
-                // self.refreshControl.endRefreshing()
+                self.refreshControl.endRefreshing()
                 self.tableView.reloadData()
             }.store(in: &subscribers)
+    }
+    
+    @objc private func segmentTaped(_ sender: UISegmentedControl) {
+        guard let category = ProductCategoryType(rawValue: sender.selectedSegmentIndex) else {
+            fatalError("no corresponding category type for the index selected by segment control")
+        }
+        viewModel?.getAllProductList(category: category)
+    }
+    
+    @objc private func refreshData(_ sender: Any) {
+        guard let category = ProductCategoryType(rawValue: segmentedControl.selectedSegmentIndex) else {
+            fatalError("no corresponding category type for the index selected by segment control")
+        }
+        viewModel?.getAllProductList(category: category)
     }
 }
 

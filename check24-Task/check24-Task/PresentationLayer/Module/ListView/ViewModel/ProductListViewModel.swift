@@ -17,7 +17,7 @@ public enum ProductCategoryType: Int {
 
 
 protocol ProductListViewModelProtocol {
-    func getAllProductList()
+    func getAllProductList(category: ProductCategoryType)
     func navigateToDetailsView(viewController:UIViewController ,products:Product)
     
     var displayedProductList: CurrentValueSubject<[Product], Never> { get }
@@ -35,9 +35,37 @@ class ProductListViewModel: ProductListViewModelProtocol {
     var category : ProductCategoryType  = .all
     var displayedProductList = CurrentValueSubject<[Product], Never>([])
     
+    private var allProducts = [Product]()
     var subscriptions = Set<AnyCancellable>()
-
-    func getAllProductList() {
+    
+    private func arrangeProducts(category: ProductCategoryType) {
+        self.category = category
+        switch category {
+        case .all:
+            showAllProducts()
+        case .available:
+            showAvailableProducts()
+        case .favorite:
+            showFavoriteProducts()
+        }
+    }
+    
+    private func showAllProducts() {
+        displayedProductList.send(allProducts)
+    }
+    
+    private func showAvailableProducts() {
+        let filtered = allProducts.filter { prodcut in
+            return prodcut.available == true
+        }
+        displayedProductList.send(filtered)
+    }
+    
+    private func showFavoriteProducts() {
+        displayedProductList.send(allProducts.filter{ $0.isFavourite })
+    }
+    
+    func getAllProductList(category: ProductCategoryType) {
        // self.isLoading = true
         let service = ProductListService(networkRequest: NativeRequestable(), environment: .development)
         service.getProductList()
@@ -53,7 +81,10 @@ class ProductListViewModel: ProductListViewModelProtocol {
                 }
             } receiveValue: { (productList) in
                 DispatchQueue.main.async {
-                    self.displayedProductList.value = productList.products
+                    self.headerSection = productList.header
+                    self.allProducts = productList.products
+                    self.arrangeProducts(category: category)
+                   // self.displayedProductList.value = productList.products
                 }
             }
             .store(in: &subscriptions)
