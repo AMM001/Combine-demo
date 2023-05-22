@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hoa-Hc-mEo">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Check24-->
+        <scene sceneID="bSf-3b-MYm">
+            <objects>
+                <viewController storyboardIdentifier="ProductListViewController" id="hoa-Hc-mEo" customClass="ProductListViewController" customModule="check24_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rFv-GL-t59">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="898"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qF0-5o-0EC">
+                                <rect key="frame" x="20" y="50" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Alle"/>
+                                    <segment title="available"/>
+                                    <segment title="favorites"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Frp-cq-MnL">
+                                <rect key="frame" x="0.0" y="111" width="414" height="753"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eqh-Ij-You"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eqh-Ij-You" firstAttribute="trailing" secondItem="Frp-cq-MnL" secondAttribute="trailing" id="2IV-C8-tiI"/>
+                            <constraint firstItem="Frp-cq-MnL" firstAttribute="top" secondItem="qF0-5o-0EC" secondAttribute="bottom" constant="30" id="Clp-7Z-NXA"/>
+                            <constraint firstItem="qF0-5o-0EC" firstAttribute="top" secondItem="rFv-GL-t59" secondAttribute="top" constant="50" id="ELX-FE-1zf"/>
+                            <constraint firstAttribute="trailing" secondItem="qF0-5o-0EC" secondAttribute="trailing" constant="20" id="PTN-zb-vZG"/>
+                            <constraint firstItem="eqh-Ij-You" firstAttribute="bottom" secondItem="Frp-cq-MnL" secondAttribute="bottom" id="PwN-NW-0zW"/>
+                            <constraint firstItem="Frp-cq-MnL" firstAttribute="leading" secondItem="eqh-Ij-You" secondAttribute="leading" id="Sea-cm-kEx"/>
+                            <constraint firstItem="qF0-5o-0EC" firstAttribute="leading" secondItem="rFv-GL-t59" secondAttribute="leading" constant="20" id="zks-od-Gj2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Check24" id="erk-lF-lrn"/>
+                    <size key="freeformSize" width="414" height="898"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="qF0-5o-0EC" id="rAn-ZC-Pcz"/>
+                        <outlet property="tableView" destination="Frp-cq-MnL" id="fyY-qW-Sgu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lDq-fM-qyK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728.24427480916029" y="-24.647887323943664"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -5,11 +5,11 @@
 //  Created by admin on 22/05/2023.
 //
 
-import Combine
+import Combine 
 import Foundation
 
 protocol ProductListServiceable {
-    func getProductList() -> AnyPublisher<[ProductListModel], NetworkError>
+    func getProductList() -> AnyPublisher<ProductListModel, NetworkError>
 }
 
 class ProductListService: ProductListServiceable {
@@ -23,7 +23,7 @@ class ProductListService: ProductListServiceable {
         self.environment = environment
     }
 
-    func getProductList() -> AnyPublisher<[ProductListModel], NetworkError> {
+    func getProductList() -> AnyPublisher<ProductListModel, NetworkError> {
         let endpoint = ServiceEndpoints.getProductListService
         let request = endpoint.createRequest(token: "",
                                              environment: self.environment)

@@ -28,6 +28,7 @@ struct Product: Codable {
     let rating: Double
     let price: Price
     
+    
     var isFavourite: Bool {
         return false
     }

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductListViewController" customModule="check24_Task" customModuleProvider="target">
+            <connections>
+                <outlet property="segmentedControl" destination="Ref-Mh-EVv" id="HGi-DR-K0Z"/>
+                <outlet property="tableView" destination="6Hk-B2-Z6n" id="6mS-SO-S5F"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="QAc-tN-LwC" customClass="ProductListViewController" customModule="check24_Task" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="mIU-5U-exB">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="898"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ref-Mh-EVv">
+                        <rect key="frame" x="20" y="50" width="374" height="32"/>
+                        <segments>
+                            <segment title="Alle"/>
+                            <segment title="available"/>
+                            <segment title="favorites"/>
+                        </segments>
+                    </segmentedControl>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Hk-B2-Z6n">
+                        <rect key="frame" x="0.0" y="111" width="414" height="753"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tableView>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="iPj-Ul-Y4b"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="Ref-Mh-EVv" firstAttribute="leading" secondItem="mIU-5U-exB" secondAttribute="leading" constant="20" id="49J-uA-Yna"/>
+                    <constraint firstItem="6Hk-B2-Z6n" firstAttribute="top" secondItem="Ref-Mh-EVv" secondAttribute="bottom" constant="30" id="Fs1-4I-5sW"/>
+                    <constraint firstAttribute="trailing" secondItem="Ref-Mh-EVv" secondAttribute="trailing" constant="20" id="GW9-dK-EU3"/>
+                    <constraint firstItem="iPj-Ul-Y4b" firstAttribute="trailing" secondItem="6Hk-B2-Z6n" secondAttribute="trailing" id="cBR-6T-NOk"/>
+                    <constraint firstItem="iPj-Ul-Y4b" firstAttribute="bottom" secondItem="6Hk-B2-Z6n" secondAttribute="bottom" id="fnY-Eo-795"/>
+                    <constraint firstItem="6Hk-B2-Z6n" firstAttribute="leading" secondItem="iPj-Ul-Y4b" secondAttribute="leading" id="g79-04-g32"/>
+                    <constraint firstItem="Ref-Mh-EVv" firstAttribute="top" secondItem="mIU-5U-exB" secondAttribute="top" constant="50" id="lNN-sJ-qfp"/>
+                </constraints>
+            </view>
+            <size key="freeformSize" width="414" height="898"/>
+            <point key="canvasLocation" x="-281.15942028985512" y="105.80357142857143"/>
+        </viewController>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
