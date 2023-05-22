@@ -77,4 +77,10 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
         }
         return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let product = viewModel?.displayedProductList.value[indexPath.row] {
+            self.viewModel?.navigateToDetailsView(viewController: self , products: product)
+        }
+    }
 }

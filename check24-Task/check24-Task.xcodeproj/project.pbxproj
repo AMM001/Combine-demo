@@ -32,6 +32,8 @@
 		84C3A1CD2A1B6938000339A6 /* ProductDisableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3A1CB2A1B6938000339A6 /* ProductDisableTableViewCell.swift */; };
 		84C3A1CE2A1B6938000339A6 /* ProductDisableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C3A1CC2A1B6938000339A6 /* ProductDisableTableViewCell.xib */; };
 		84C3A1D02A1B6ACF000339A6 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3A1CF2A1B6ACF000339A6 /* ProductListViewModel.swift */; };
+		84C3A1D82A1B8880000339A6 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3A1D72A1B8880000339A6 /* ProductDetailsViewController.swift */; };
+		84C3A1DA2A1B89E2000339A6 /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3A1D92A1B89E2000339A6 /* ProductDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		84C3A1CB2A1B6938000339A6 /* ProductDisableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDisableTableViewCell.swift; sourceTree = "<group>"; };
 		84C3A1CC2A1B6938000339A6 /* ProductDisableTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDisableTableViewCell.xib; sourceTree = "<group>"; };
 		84C3A1CF2A1B6ACF000339A6 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		84C3A1D72A1B8880000339A6 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		84C3A1D92A1B89E2000339A6 /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
 		E804D99F1999E120A60B28E5 /* Pods-check24-Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-check24-Task.release.xcconfig"; path = "Target Support Files/Pods-check24-Task/Pods-check24-Task.release.xcconfig"; sourceTree = "<group>"; };
 		F5FAFA48FA4F280A86C51AAB /* Pods-check24-Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-check24-Task.debug.xcconfig"; path = "Target Support Files/Pods-check24-Task/Pods-check24-Task.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -302,6 +306,7 @@
 		84C3A1BA2A1B62DC000339A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				84C3A1D72A1B8880000339A6 /* ProductDetailsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 		84C3A1BB2A1B62EB000339A6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				84C3A1D92A1B89E2000339A6 /* ProductDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -534,7 +540,9 @@
 				84C3A1732A1B59FC000339A6 /* ViewController.swift in Sources */,
 				84C3A1AC2A1B5BAF000339A6 /* RequestableProtocol.swift in Sources */,
 				84C3A1A32A1B5ACD000339A6 /* Environment.swift in Sources */,
+				84C3A1D82A1B8880000339A6 /* ProductDetailsViewController.swift in Sources */,
 				84C3A16F2A1B59FC000339A6 /* AppDelegate.swift in Sources */,
+				84C3A1DA2A1B89E2000339A6 /* ProductDetailsViewModel.swift in Sources */,
 				84C3A1C92A1B660E000339A6 /* ProductTableViewCell.swift in Sources */,
 				84C3A1A92A1B5B79000339A6 /* NetworkRequest.swift in Sources */,
 				84C3A1AE2A1B5BC8000339A6 /* NativeRequestable.swift in Sources */,
