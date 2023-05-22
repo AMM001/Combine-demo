@@ -1,24 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K9h-pb-dOG">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Check24-->
+        <scene sceneID="fQB-aG-dzJ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="ProductListViewController" id="K9h-pb-dOG" customClass="ProductListViewController" customModule="check24_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fbz-lY-KWc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="898"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HyH-DX-qvw">
+                                <rect key="frame" x="20" y="50" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Alle"/>
+                                    <segment title="available"/>
+                                    <segment title="favorites"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uYd-QD-S6H">
+                                <rect key="frame" x="0.0" y="111" width="414" height="753"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ld0-X1-FBV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uYd-QD-S6H" firstAttribute="leading" secondItem="ld0-X1-FBV" secondAttribute="leading" id="3Ea-4K-C4e"/>
+                            <constraint firstItem="ld0-X1-FBV" firstAttribute="trailing" secondItem="uYd-QD-S6H" secondAttribute="trailing" id="EEh-9G-Eqp"/>
+                            <constraint firstItem="HyH-DX-qvw" firstAttribute="top" secondItem="Fbz-lY-KWc" secondAttribute="top" constant="50" id="Haa-sk-lbb"/>
+                            <constraint firstAttribute="trailing" secondItem="HyH-DX-qvw" secondAttribute="trailing" constant="20" id="KVF-ZL-qOd"/>
+                            <constraint firstItem="HyH-DX-qvw" firstAttribute="leading" secondItem="Fbz-lY-KWc" secondAttribute="leading" constant="20" id="foF-xK-3Sr"/>
+                            <constraint firstItem="ld0-X1-FBV" firstAttribute="bottom" secondItem="uYd-QD-S6H" secondAttribute="bottom" id="gUv-ws-5Vf"/>
+                            <constraint firstItem="uYd-QD-S6H" firstAttribute="top" secondItem="HyH-DX-qvw" secondAttribute="bottom" constant="30" id="zLV-eY-stX"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Check24" id="1Q0-il-8CT"/>
+                    <size key="freeformSize" width="414" height="898"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="HyH-DX-qvw" id="Ovz-4H-Krb"/>
+                        <outlet property="tableView" destination="uYd-QD-S6H" id="ZVa-KC-d14"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PmG-pP-dyz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-344" y="-53"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -32,7 +32,6 @@
 		84C3A1CD2A1B6938000339A6 /* ProductDisableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3A1CB2A1B6938000339A6 /* ProductDisableTableViewCell.swift */; };
 		84C3A1CE2A1B6938000339A6 /* ProductDisableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C3A1CC2A1B6938000339A6 /* ProductDisableTableViewCell.xib */; };
 		84C3A1D02A1B6ACF000339A6 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3A1CF2A1B6ACF000339A6 /* ProductListViewModel.swift */; };
-		84C3A1D22A1B76D3000339A6 /* ProductListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C3A1D12A1B76D3000339A6 /* ProductListView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +81,6 @@
 		84C3A1CB2A1B6938000339A6 /* ProductDisableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDisableTableViewCell.swift; sourceTree = "<group>"; };
 		84C3A1CC2A1B6938000339A6 /* ProductDisableTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDisableTableViewCell.xib; sourceTree = "<group>"; };
 		84C3A1CF2A1B6ACF000339A6 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
-		84C3A1D12A1B76D3000339A6 /* ProductListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductListView.storyboard; sourceTree = "<group>"; };
 		E804D99F1999E120A60B28E5 /* Pods-check24-Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-check24-Task.release.xcconfig"; path = "Target Support Files/Pods-check24-Task/Pods-check24-Task.release.xcconfig"; sourceTree = "<group>"; };
 		F5FAFA48FA4F280A86C51AAB /* Pods-check24-Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-check24-Task.debug.xcconfig"; path = "Target Support Files/Pods-check24-Task/Pods-check24-Task.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -289,7 +287,6 @@
 			children = (
 				84C3A1C32A1B64FC000339A6 /* Cell */,
 				84C3A1BE2A1B63EA000339A6 /* ProductListViewController.swift */,
-				84C3A1D12A1B76D3000339A6 /* ProductListView.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -460,7 +457,6 @@
 				84C3A17B2A1B59FE000339A6 /* LaunchScreen.storyboard in Resources */,
 				84C3A1782A1B59FE000339A6 /* Assets.xcassets in Resources */,
 				84C3A1CA2A1B660E000339A6 /* ProductTableViewCell.xib in Resources */,
-				84C3A1D22A1B76D3000339A6 /* ProductListView.storyboard in Resources */,
 				84C3A1CE2A1B6938000339A6 /* ProductDisableTableViewCell.xib in Resources */,
 				84C3A1762A1B59FC000339A6 /* Main.storyboard in Resources */,
 			);
@@ -726,7 +722,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "check24-Task/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = ProductListView.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -755,7 +751,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "check24-Task/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = ProductListView.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
