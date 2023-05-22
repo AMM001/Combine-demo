@@ -18,6 +18,8 @@ class ProductListViewController:UIViewController {
     private var viewModel:ProductListViewModelProtocol?
     private var subscribers = Set<AnyCancellable>()
     
+    var isFailedToRetrieveData = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -40,12 +42,23 @@ class ProductListViewController:UIViewController {
         tableView.separatorStyle = .none
         tableView.register(ProductTableViewCell.self)
         tableView.register(ProductDisableTableViewCell.self)
+        tableView.register(ErrorViewTableViewCell.self)
         //        tableView.register(ProductListHeaderView.self)
         tableView.register(ProductListFooterView.self)
         tableView.refreshControl = refreshControl
     }
     
     func bindData() {
+        viewModel?.isFailedToRetrieveData
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] isFailed in
+                guard let self = self else {
+                    return
+                }
+                isFailedToRetrieveData = isFailed
+                
+            }.store(in: &subscribers)
+        
         self.viewModel?.displayedProductList
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
@@ -75,7 +88,11 @@ class ProductListViewController:UIViewController {
 //MARK: - UITableViewDelegate & UITableViewDataSource
 extension ProductListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.displayedProductList.value.count ?? 0
+        if isFailedToRetrieveData {
+            return 1
+        }else{
+            return viewModel?.displayedProductList.value.count ?? 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -93,7 +110,8 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
                 return cell
             }
         }
-        return UITableViewCell()
+        let cell: ErrorViewTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

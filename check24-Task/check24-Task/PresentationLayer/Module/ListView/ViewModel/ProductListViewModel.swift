@@ -25,6 +25,8 @@ protocol ProductListViewModelProtocol {
     var displayedProductList: CurrentValueSubject<[Product], Never> { get }
     var headerSection: Header? {get}
     var isLoading : PassthroughSubject<Bool, Never> {get}
+    var isFailedToRetrieveData : PassthroughSubject<Bool, Never> {get}
+
     var fetchedError : PassthroughSubject<Error, Never> {get }
     var category: ProductCategoryType { get set }
 }
@@ -33,6 +35,7 @@ class ProductListViewModel: ProductListViewModelProtocol {
 
     var headerSection: Header?
     var isLoading = PassthroughSubject<Bool, Never>()
+    var isFailedToRetrieveData = PassthroughSubject<Bool, Never>()
     var fetchedError = PassthroughSubject<Error, Never>()
     var category : ProductCategoryType  = .all
     var displayedProductList = CurrentValueSubject<[Product], Never>([])
@@ -77,6 +80,9 @@ class ProductListViewModel: ProductListViewModelProtocol {
                 }
                 switch completion {
                 case .failure(let error):
+                    DispatchQueue.main.async {
+                        self.isFailedToRetrieveData.send(true)
+                    }
                     print("oops got an error \(error.localizedDescription)")
                 case .finished:
                     print("nothing much to do here")

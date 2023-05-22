@@ -36,6 +36,8 @@
 		84C3A1DA2A1B89E2000339A6 /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3A1D92A1B89E2000339A6 /* ProductDetailsViewModel.swift */; };
 		84C3A1DD2A1B9946000339A6 /* ProductListFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3A1DC2A1B9946000339A6 /* ProductListFooterView.swift */; };
 		84C3A1E02A1B9AD9000339A6 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3A1DF2A1B9AD9000339A6 /* WebViewViewController.swift */; };
+		84C3A1E42A1B9EFE000339A6 /* ErrorViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3A1E22A1B9EFE000339A6 /* ErrorViewTableViewCell.swift */; };
+		84C3A1E52A1B9EFE000339A6 /* ErrorViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C3A1E32A1B9EFE000339A6 /* ErrorViewTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		84C3A1D92A1B89E2000339A6 /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
 		84C3A1DC2A1B9946000339A6 /* ProductListFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListFooterView.swift; sourceTree = "<group>"; };
 		84C3A1DF2A1B9AD9000339A6 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		84C3A1E22A1B9EFE000339A6 /* ErrorViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewTableViewCell.swift; sourceTree = "<group>"; };
+		84C3A1E32A1B9EFE000339A6 /* ErrorViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorViewTableViewCell.xib; sourceTree = "<group>"; };
 		E804D99F1999E120A60B28E5 /* Pods-check24-Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-check24-Task.release.xcconfig"; path = "Target Support Files/Pods-check24-Task/Pods-check24-Task.release.xcconfig"; sourceTree = "<group>"; };
 		F5FAFA48FA4F280A86C51AAB /* Pods-check24-Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-check24-Task.debug.xcconfig"; path = "Target Support Files/Pods-check24-Task/Pods-check24-Task.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -372,6 +376,8 @@
 		84C3A1E12A1B9E95000339A6 /* ErrorView */ = {
 			isa = PBXGroup;
 			children = (
+				84C3A1E22A1B9EFE000339A6 /* ErrorViewTableViewCell.swift */,
+				84C3A1E32A1B9EFE000339A6 /* ErrorViewTableViewCell.xib */,
 			);
 			path = ErrorView;
 			sourceTree = "<group>";
@@ -493,6 +499,7 @@
 				84C3A17B2A1B59FE000339A6 /* LaunchScreen.storyboard in Resources */,
 				84C3A1782A1B59FE000339A6 /* Assets.xcassets in Resources */,
 				84C3A1CA2A1B660E000339A6 /* ProductTableViewCell.xib in Resources */,
+				84C3A1E52A1B9EFE000339A6 /* ErrorViewTableViewCell.xib in Resources */,
 				84C3A1CE2A1B6938000339A6 /* ProductDisableTableViewCell.xib in Resources */,
 				84C3A1762A1B59FC000339A6 /* Main.storyboard in Resources */,
 			);
@@ -567,6 +574,7 @@
 				84C3A1C62A1B6570000339A6 /* StarComponent.swift in Sources */,
 				84C3A1A62A1B5B38000339A6 /* ProductEndPoints.swift in Sources */,
 				84C3A1C22A1B6498000339A6 /* UITableView+Extensions.swift in Sources */,
+				84C3A1E42A1B9EFE000339A6 /* ErrorViewTableViewCell.swift in Sources */,
 				84C3A1CD2A1B6938000339A6 /* ProductDisableTableViewCell.swift in Sources */,
 				84C3A1732A1B59FC000339A6 /* ViewController.swift in Sources */,
 				84C3A1AC2A1B5BAF000339A6 /* RequestableProtocol.swift in Sources */,

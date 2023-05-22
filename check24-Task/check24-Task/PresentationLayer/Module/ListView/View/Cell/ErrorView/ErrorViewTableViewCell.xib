@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="KGk-i7-Jjw" customClass="ErrorViewTableViewCell" customModule="check24_Task" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="124"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="415" height="124"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error" translatesAutoresizingMaskIntoConstraints="NO" id="Stk-cw-h56">
+                        <rect key="frame" x="15" y="15" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="IXc-yg-vuY"/>
+                            <constraint firstAttribute="width" constant="50" id="XEq-db-usC"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="prpblem " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2K-fH-RGi">
+                        <rect key="frame" x="90" y="24" width="68" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="an error happened" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D73-oF-Fml">
+                        <rect key="frame" x="89.999999999999986" y="44" width="140.66666666666663" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48f-lf-jLp">
+                        <rect key="frame" x="100" y="73" width="295" height="35"/>
+                        <color key="backgroundColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="refresh">
+                            <backgroundConfiguration key="background"/>
+                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="D73-oF-Fml" firstAttribute="top" secondItem="P2K-fH-RGi" secondAttribute="bottom" constant="-1" id="04x-Cm-k25"/>
+                    <constraint firstItem="P2K-fH-RGi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="4Ag-0B-p7s"/>
+                    <constraint firstItem="48f-lf-jLp" firstAttribute="top" secondItem="D73-oF-Fml" secondAttribute="bottom" constant="8" symbolic="YES" id="5Or-oc-Jf7"/>
+                    <constraint firstItem="P2K-fH-RGi" firstAttribute="leading" secondItem="Stk-cw-h56" secondAttribute="trailing" constant="25" id="Fyw-Ph-5am"/>
+                    <constraint firstItem="48f-lf-jLp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="100" id="H2I-C6-d45"/>
+                    <constraint firstAttribute="trailing" secondItem="48f-lf-jLp" secondAttribute="trailing" constant="20" id="PjC-Zg-bjD"/>
+                    <constraint firstItem="Stk-cw-h56" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="gqW-LE-CKB"/>
+                    <constraint firstItem="Stk-cw-h56" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="leP-0T-wCK"/>
+                    <constraint firstItem="D73-oF-Fml" firstAttribute="leading" secondItem="P2K-fH-RGi" secondAttribute="leading" id="snr-YP-5de"/>
+                    <constraint firstAttribute="bottom" secondItem="48f-lf-jLp" secondAttribute="bottom" constant="16" id="xuY-rm-5wV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="138.1679389312977" y="15.492957746478874"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="error" width="225" height="225"/>
+    </resources>
+</document>
