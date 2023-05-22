@@ -41,7 +41,7 @@ class ProductListViewController:UIViewController {
         tableView.register(ProductTableViewCell.self)
         tableView.register(ProductDisableTableViewCell.self)
         //        tableView.register(ProductListHeaderView.self)
-        //        tableView.register(ProductListFooterView.self)
+        tableView.register(ProductListFooterView.self)
         tableView.refreshControl = refreshControl
     }
     
@@ -100,5 +100,21 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
         if let product = viewModel?.displayedProductList.value[indexPath.row] {
             self.viewModel?.navigateToDetailsView(viewController: self , products: product)
         }
+    }
+    
+    //footerView
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footer = tableView.dequeue(ProductListFooterView.self)
+        footer.configure(text: "© 2016 Check24") { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.viewModel?.navigateTowebView(viewController: self)
+        }
+        return footer
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 32
     }
 }

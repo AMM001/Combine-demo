@@ -18,8 +18,10 @@ public enum ProductCategoryType: Int {
 
 protocol ProductListViewModelProtocol {
     func getAllProductList(category: ProductCategoryType)
+    //navigation
     func navigateToDetailsView(viewController:UIViewController ,products:Product)
-    
+    func navigateTowebView(viewController:UIViewController)
+
     var displayedProductList: CurrentValueSubject<[Product], Never> { get }
     var headerSection: Header? {get}
     var isLoading : PassthroughSubject<Bool, Never> {get}
@@ -28,7 +30,7 @@ protocol ProductListViewModelProtocol {
 }
 
 class ProductListViewModel: ProductListViewModelProtocol {
-    
+
     var headerSection: Header?
     var isLoading = PassthroughSubject<Bool, Never>()
     var fetchedError = PassthroughSubject<Error, Never>()
@@ -66,12 +68,12 @@ class ProductListViewModel: ProductListViewModelProtocol {
     }
     
     func getAllProductList(category: ProductCategoryType) {
-       // self.isLoading = true
+        // self.isLoading = true
         let service = ProductListService(networkRequest: NativeRequestable(), environment: .development)
         service.getProductList()
             .sink { (completion) in
                 DispatchQueue.main.async {
-                   // self.isLoading = false
+                    // self.isLoading = false
                 }
                 switch completion {
                 case .failure(let error):
@@ -84,7 +86,7 @@ class ProductListViewModel: ProductListViewModelProtocol {
                     self.headerSection = productList.header
                     self.allProducts = productList.products
                     self.arrangeProducts(category: category)
-                   // self.displayedProductList.value = productList.products
+                    // self.displayedProductList.value = productList.products
                 }
             }
             .store(in: &subscriptions)
@@ -98,9 +100,11 @@ class ProductListViewModel: ProductListViewModelProtocol {
         if let detailsViewController = storyBoard.instantiateViewController(withIdentifier: "ProductDetailsViewController") as? ProductDetailsViewController {
             detailsViewController.setup(viewModel: viewModel)
             viewController.present(detailsViewController, animated: true)
-         
-
         }
-        
+    }
+    func navigateTowebView(viewController:UIViewController) {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "WebViewViewController") as! WebViewViewController
+        viewController.present(vc, animated: true)
     }
 }

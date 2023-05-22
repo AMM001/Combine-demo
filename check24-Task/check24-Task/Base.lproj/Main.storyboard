@@ -244,6 +244,22 @@
             </objects>
             <point key="canvasLocation" x="1365.6488549618321" y="-59.154929577464792"/>
         </scene>
+        <!--Web View View Controller-->
+        <scene sceneID="ar9-1c-Ie5">
+            <objects>
+                <viewController storyboardIdentifier="WebViewViewController" id="Bq7-Mq-hiO" customClass="WebViewViewController" customModule="check24_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LhJ-sK-yvQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="K2B-1H-hUq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <size key="freeformSize" width="393" height="852"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B2B-Fq-NDa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2063" y="-54"/>
+        </scene>
     </scenes>
     <resources>
         <image name="star" catalog="system" width="128" height="116"/>
