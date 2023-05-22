@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		119D9277D5FEE1C20D249850 /* Pods_check24_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6235327709C40BBFE36A426C /* Pods_check24_Task.framework */; };
 		84C3A16F2A1B59FC000339A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3A16E2A1B59FC000339A6 /* AppDelegate.swift */; };
 		84C3A1712A1B59FC000339A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3A1702A1B59FC000339A6 /* SceneDelegate.swift */; };
 		84C3A1732A1B59FC000339A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3A1722A1B59FC000339A6 /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6235327709C40BBFE36A426C /* Pods_check24_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_check24_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C3A16B2A1B59FC000339A6 /* check24-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "check24-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C3A16E2A1B59FC000339A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C3A1702A1B59FC000339A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,8 @@
 		84C3A1AD2A1B5BC8000339A6 /* NativeRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeRequestable.swift; sourceTree = "<group>"; };
 		84C3A1B02A1B5CA1000339A6 /* ProductListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListService.swift; sourceTree = "<group>"; };
 		84C3A1B32A1B5CE8000339A6 /* ProductListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListModel.swift; sourceTree = "<group>"; };
+		E804D99F1999E120A60B28E5 /* Pods-check24-Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-check24-Task.release.xcconfig"; path = "Target Support Files/Pods-check24-Task/Pods-check24-Task.release.xcconfig"; sourceTree = "<group>"; };
+		F5FAFA48FA4F280A86C51AAB /* Pods-check24-Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-check24-Task.debug.xcconfig"; path = "Target Support Files/Pods-check24-Task/Pods-check24-Task.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				119D9277D5FEE1C20D249850 /* Pods_check24_Task.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +95,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A897AD02937C76825DB4E61 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5FAFA48FA4F280A86C51AAB /* Pods-check24-Task.debug.xcconfig */,
+				E804D99F1999E120A60B28E5 /* Pods-check24-Task.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		84C3A1622A1B59FC000339A6 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +112,8 @@
 				84C3A1842A1B59FE000339A6 /* check24-TaskTests */,
 				84C3A18E2A1B59FE000339A6 /* check24-TaskUITests */,
 				84C3A16C2A1B59FC000339A6 /* Products */,
+				7A897AD02937C76825DB4E61 /* Pods */,
+				E32AE614759E32E3C151D228 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -220,6 +237,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E32AE614759E32E3C151D228 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6235327709C40BBFE36A426C /* Pods_check24_Task.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,9 +252,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84C3A1952A1B59FE000339A6 /* Build configuration list for PBXNativeTarget "check24-Task" */;
 			buildPhases = (
+				95F15CD1950C484C121D05B7 /* [CP] Check Pods Manifest.lock */,
 				84C3A1672A1B59FC000339A6 /* Sources */,
 				84C3A1682A1B59FC000339A6 /* Frameworks */,
 				84C3A1692A1B59FC000339A6 /* Resources */,
+				F8FD24F30E6C90ACA85D0890 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -345,6 +372,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		95F15CD1950C484C121D05B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-check24-Task-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8FD24F30E6C90ACA85D0890 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-check24-Task/Pods-check24-Task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-check24-Task/Pods-check24-Task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-check24-Task/Pods-check24-Task-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84C3A1672A1B59FC000339A6 /* Sources */ = {
@@ -532,6 +601,7 @@
 		};
 		84C3A1962A1B59FE000339A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5FAFA48FA4F280A86C51AAB /* Pods-check24-Task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -560,6 +630,7 @@
 		};
 		84C3A1972A1B59FE000339A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E804D99F1999E120A60B28E5 /* Pods-check24-Task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
